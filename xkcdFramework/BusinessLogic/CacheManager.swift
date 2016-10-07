@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class CacheManager {
+class CacheManager {
     
     // Singleton
     static let sharedManager = CacheManager()
@@ -23,14 +23,14 @@ public class CacheManager {
     private let CACHE_NAME = "IMAGE_CACHE"
     private let cacheManager: NSCache<NSString, UIImage>
     
-    public func cacheImage(image: UIImage, forComic comic: Comic) {
+    func cacheImage(image: UIImage, forComic comic: Comic) {
         let key = String(comic.id) // for now, we'll just use the safeTitle
         let cost = UIImagePNGRepresentation(image)!.count
         
         self.cacheManager.setObject(image, forKey: key as NSString, cost: cost)
     }
     
-    public func imageFromCache(forComic comic: Comic) -> UIImage? {
+    func imageFromCache(forComic comic: Comic) -> UIImage? {
         if let img = self.cacheManager.object(forKey: String(comic.id) as NSString) {
             return img
         }

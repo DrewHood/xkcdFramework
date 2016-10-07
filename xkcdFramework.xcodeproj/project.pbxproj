@@ -20,6 +20,8 @@
 		3A2868F21DA7ED3500F2B843 /* String+Unicode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2868EC1DA7ED3500F2B843 /* String+Unicode.swift */; };
 		3A2868F31DA7ED3500F2B843 /* UInt+HexConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2868ED1DA7ED3500F2B843 /* UInt+HexConversion.swift */; };
 		3A2868F51DA7ED5C00F2B843 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2868F41DA7ED5C00F2B843 /* CoreDataManager.swift */; };
+		3A75B0381DA8002B00A42AA9 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2868CF1DA7EC2500F2B843 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A75B0391DA8003300A42AA9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2868BA1DA7EC2500F2B843 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,21 @@
 			remoteInfo = "Alamofire iOS";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A75B02A1DA8001A00A42AA9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A75B0391DA8003300A42AA9 /* Alamofire.framework in Embed Frameworks */,
+				3A75B0381DA8002B00A42AA9 /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A28687D1DA7EB0C00F2B843 /* xkcdFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = xkcdFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +296,7 @@
 				3A2868791DA7EB0C00F2B843 /* Frameworks */,
 				3A28687A1DA7EB0C00F2B843 /* Headers */,
 				3A28687B1DA7EB0C00F2B843 /* Resources */,
+				3A75B02A1DA8001A00A42AA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

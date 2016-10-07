@@ -15,7 +15,7 @@ import SwiftyJSON
 public class ComicManager {
     
     // Errors
-    enum ComicManagerError: Error {
+    public enum ComicManagerError: Error {
         case imageDataMarshalling
         case networking(underlyingError: Error)
         case unknown
@@ -32,17 +32,16 @@ public class ComicManager {
     private var isUpdating: Bool = false
     
     // Singleton
-    static let sharedManager = ComicManager()
+    public static let sharedManager = ComicManager()
     private init() {
-        //let appDel = UIApplication.shared.delegate as! AppDelegate
-        self.moc = NSManagedObjectContext()
+        self.moc = CoreDataManager.sharedManager.persistentContainer.viewContext
         
         self.cacheManager = CacheManager.sharedManager
     }
     
     // MARK: - Delegation
-    var delegate: ComicManagerDelegate?
-    var imageDelegate: ComicManagerImageDelegate?
+    public var delegate: ComicManagerDelegate?
+    public var imageDelegate: ComicManagerImageDelegate?
     
     private func delegateAdded(comic: Comic) {
         // Inform our delegate.
@@ -307,5 +306,10 @@ public class ComicManager {
         } catch {
             print("Failed to save favorite!")
         }
+    }
+    
+    // MARK: - Saving
+    public func saveContext() {
+        CoreDataManager.sharedManager.saveContext()
     }
 }

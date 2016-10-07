@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ComicManagerImageDelegate {
+public protocol ComicManagerImageDelegate {
     func comicManager(manager: ComicManager, retrievedImage image: UIImage, forComic comic: Comic)
     func comicManager(manager: ComicManager, encounteredImageRetrievalError error: Error)
 }
