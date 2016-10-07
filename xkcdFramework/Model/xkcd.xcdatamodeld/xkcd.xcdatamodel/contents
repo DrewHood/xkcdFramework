@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16A319" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Comic" representedClassName="Comic" codeGenerationType="class">
+        <attribute name="alt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favorite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="news" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remoteImageUrl" attributeType="String" syncable="YES"/>
+        <attribute name="safeTitle" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="transcript" optional="YES" attributeType="String" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <elements>
+        <element name="Comic" positionX="261" positionY="189" width="128" height="180"/>
+    </elements>
+</model>
